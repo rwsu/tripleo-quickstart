@@ -22,7 +22,7 @@
     remove: yes
   become: true
 
-- name: remove non-root user passwordless sudo priveledges
+- name: remove non-root user passwordless sudo privileges
   file:
     name: "/etc/sudoers.d/{{ non_root_user }}"
     state: absent

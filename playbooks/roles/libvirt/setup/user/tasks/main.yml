@@ -51,7 +51,7 @@
     mode: 0644
   become: true
 
-- name: give non-root user passwordless sudo priveledges
+- name: give non-root user passwordless sudo privileges
   copy:
     content: "{{non_root_user}} ALL=(root) NOPASSWD:ALL"
     dest: /etc/sudoers.d/{{non_root_user}}
